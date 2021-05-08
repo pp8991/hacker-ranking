@@ -48,6 +48,12 @@ const userSchema = new mongoose.Schema({
     timestamps: true
 })
 
+userSchema.virtual('userscore', {
+    ref: 'Score',
+    localField: '_id',
+    foreignField: 'owner'
+})
+
 //to hide unnecessary information given to user
 userSchema.methods.toJSON = function () {
     const user = this

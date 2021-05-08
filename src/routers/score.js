@@ -35,13 +35,13 @@ router.get('/scores/me', auth, async (req, res) =>{
 
 //Get all Score Profile
 router.get('/scores', auth, async (req, res) =>{
+    var mysort = { solution_accepted: -1 };
     try{
-        const score=await Score.find()
+        const score=await Score.find().sort(mysort)
         res.send(score)
     }catch(e){
         res.status(400).send()
     }
 })
-
 
 module.exports=router
