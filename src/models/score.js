@@ -10,6 +10,9 @@ const scoreShema = new mongoose.Schema({
     },
     solution_accepted:{
         type: Number,
+    },ranking_coefficient: {
+        type: Number,
+        default: 0,
     },
     owner: {
         type: mongoose.Schema.Types.ObjectId,
