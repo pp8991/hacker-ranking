@@ -5,6 +5,8 @@ const Score=require('../models/score')
 const router=new express.Router()
 
 
+
+
 //Creating the Score of hacker(it may be created by its
 // contest but here we are creating manually to get the data)
 router.post('/scores', auth, async (req,res) => {

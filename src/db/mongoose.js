@@ -1,7 +1,7 @@
 const mongoose=require('mongoose')
 
 
-mongoose.connect('mongodb+srv://taskapp:physics123physics@cluster0.fnugi.mongodb.net/hacker-ranking?retryWrites=true&w=majority',{
+mongoose.connect('mongodb://127.0.0.1:27017/hacker-ranking',{
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false
